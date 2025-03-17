@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+  block-size: border-box;
+
+}
+body{
+  background-image: url("/public/bg.jpg");
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  height: 100vh;
+}
+.containe{
+  color: black;
+    background-color: rgba(43, 38, 92, 0.712);
+    backdrop-filter: blur(100px) saturate(5) ;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    border-radius: 12px;
+}
+@media only screen and (max-width: 600px) {
+  .containe {
+    background-color: rgba(43, 38, 92, 0.712);
+    backdrop-filter: blur(100px) saturate(5) ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    border-radius: 1px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .details {
+    display: none;
+  }
+}
+
+
+.message{
+  max-width: 70%;
+  display: flex;
+  gap: 20px;
+  p{
+    background-color: #24407a;
+    padding: 20px;
+    border-radius: 8px;
+    width: fit-content;
+  }  
+
+  &.own{
+    align-self: flex-end;
+  p{
+    background-color: #5183fe;
+    padding: 20px;
+    border-radius: 8px;
+  }  
+  
+  }
+
+}
+
+.send{
+  &:disabled{
+    background-color: #8399d1;
+    cursor: not-allowed;
+  }
+}
+
+.chat{
+  flex: 2;
+height: 100%;
+}
+
+
+.scroll-container {
+  overflow-y: auto;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #e4e4e4;
+  border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+  border: 2px solid #e4e4e4;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:active {
+  background: #333;
+}
+
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #e4e4e4;
+}
